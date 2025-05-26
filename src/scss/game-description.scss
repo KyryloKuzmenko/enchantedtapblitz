@@ -1,0 +1,68 @@
+.game-description-wrap {
+  display: flex;
+  flex-direction: column;
+  background: #f1f1f1;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  @include media(desktop) {
+    flex-direction: row;
+    gap: 135px;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 120px;
+  }
+}
+
+.game-description-title {
+  font-size: 40px;
+  line-height: 0.9;
+  text-transform: uppercase;
+  color: #de5125;
+  @include media(desktop) {
+    color: #1b1a1b;
+  }
+}
+
+.game-description-subtitle {
+  font-size: 16px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #1b1a1b;
+  margin-top: 16px;
+}
+
+.game-description-main-text {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.42;
+  color: #747474;
+  margin-top: 32px;
+  @include media(desktop) {
+    margin-top: 80px;
+  }
+}
+
+.game-description-subtext {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #747474;
+  margin-top: 16px;
+}
+
+.game-description-img {
+  width: 343px;
+  height: 417px;
+  @include media(desktop) {
+    order: 1;
+    width: 440px;
+    height: 535px;
+  }
+}
+
+.game-deskription-main {
+  @include media(desktop) {
+    order: 2;
+  }
+}
