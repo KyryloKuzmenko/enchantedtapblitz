@@ -1,72 +1,96 @@
-.header {
-  padding: 20px 0;
-}
-
-.nav {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 20px;
-}
-
-.nav-list {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-
-  @include media(tablet) {
-    justify-content: flex-start;
-  }
-
-  @include media(desktop) {
-    justify-content: flex-end;
-  }
-}
-
-.nav-link {
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  @include font(30, 40);
-  color: $_header_color;
-}
-
-.nav-link:hover,
-.nav-link:focus {
-  color: $_header_accent_color;
-}
-
-.burger-btn,
-.btn-close {
-  padding: 0.5em 0.8em;
-  font-size: 1rem;
-  background-color: blueviolet;
-  border: none;
-  border-radius: 0.5em;
-  color: #fff;
-}
-
-.burger-menu {
-  background-color: lightgreen;
-  display: flex;
-  justify-content: space-between;
-  width: 150px;
-  padding: 8px;
-  position: absolute;
-  top: 0;
+.header-section {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
   right: 0;
+  @include media(desktop) {
+    top: 16px;
+    border-radius: 10px;
+    padding: 8px 0px;
+    height: 48px;
+  }
 }
 
-.btn-close {
-  align-self: baseline;
-  padding: 4px;
-}
-
-[data-visible='open'] {
-  display: flex;
-}
-
-[data-visible='close'] {
+.hidden-header-nav-list {
   display: none;
+  @include media(desktop) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.nav-container {
+  position: relative;
+}
+
+.burger-open-btn {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  right: 16px;
+  top: 10px;
+  @include media(desktop) {
+    display: none;
+  }
+}
+
+.burger-close-btn {
+  display: none;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 10px;
+  right: 16px;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: 375px;
+  height: 100%;
+  margin: 0 auto;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  background: #f1f1f1;
+}
+
+.backdrop.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.bd-nav {
+  margin-top: 84px;
+}
+
+.bg-nav-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.bg-nav-list-item {
+  padding: 8px 0px;
+}
+
+.bg-nav-list-link {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #1b1a1b;
+}
+
+.hidden-header-nav-list-link {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #fff;
 }

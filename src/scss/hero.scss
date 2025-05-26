@@ -1,0 +1,56 @@
+.hero-wrap {
+  background-image: url('../img/mobile/hero-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 800px;
+  height: 100%;
+  display: flex;
+  padding-top: 140px;
+  @include media(desktop) {
+    background-image: url('../img/desktop/hero-desktop-img.png');
+    padding-top: 244px;
+  }
+}
+
+.hero-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+
+}
+
+.hero-title {
+  font-size: 40px;
+  line-height: 0.9;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  @include media(desktop) {
+    font-size: 64px;
+  }
+}
+
+.hero-text {
+  font-family: 'Brawler', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+}
+
+.play-now-link {
+  padding: 14px 20px;
+  width: 230px;
+  height: 48px;
+  background: linear-gradient(90deg, #ff7201 11.54%, #ff1f01 96.27%);
+  font-family: 'Brawler', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+}
