@@ -1,5 +1,5 @@
 .header-section {
-  position: fixed;
+  position: absolute;
   z-index: 1000;
   left: 0;
   right: 0;
@@ -93,4 +93,10 @@
   line-height: 1;
   text-transform: uppercase;
   color: #fff;
+}
+
+
+
+body.light-theme .hidden-header-nav-list-link {
+  color: #1b1a1b;
 }

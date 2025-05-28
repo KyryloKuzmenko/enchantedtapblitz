@@ -1,0 +1,75 @@
+.cookies-wrap {
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+  display: none;
+  flex-direction: column;
+  align-items: start;
+  transform: translateX(-50%);
+  background: #fff;
+  padding: 24px 16px;
+  width: 375px;
+  height: 270px;
+  @include media(desktop) {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 168px;
+    padding: 40px;
+  }
+}
+
+.cookies-btn-wrap {
+  display: flex;
+  gap: 8px;
+  margin-top: 32px;
+}
+
+.cookies-title {
+  font-family: 'Brawler', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #1b1a1b;
+
+}
+
+.cookies-text {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.42;
+  color: #1b1a1b;
+  margin-top: 16px;
+  @include media(desktop) {
+    width: 837px;
+  }
+}
+
+.cookies-accept {
+  border-radius: 4px;
+
+  width: 167px;
+  height: 50px;
+  background: #de5125;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.cookies-decline {
+  background: #fff;
+  border: 1px solid #de5125;
+  border-radius: 4px;
+  width: 167px;
+  height: 50px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: #de5125;
+}
